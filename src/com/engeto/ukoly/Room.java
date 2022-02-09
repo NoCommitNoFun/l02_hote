@@ -3,6 +3,14 @@ package com.engeto.ukoly;
 import java.math.BigDecimal;
 
 public class Room {
+
+    public int roomNumber;
+    public int bedsNumber;
+    public boolean balcony;
+    public boolean seaView;
+    public BigDecimal price;
+
+
     public Room(int roomNumber, int bedsNumber, boolean balcony, boolean seaView, BigDecimal price) {
         this.roomNumber = roomNumber;
         this.bedsNumber = bedsNumber;
@@ -11,19 +19,12 @@ public class Room {
         this.price = price;
     }
 
-    int roomNumber;
-    int bedsNumber;
-    boolean balcony;
-    boolean seaView;
-    BigDecimal price;
-
-    public String RoomInfo(){
+    public String RoomInfo() {
         String balconyInfo;
         String seaViewInfo;
-        if(balcony){
-            balconyInfo=" s balkónom";
-        }
-        else{
+        if (balcony) {
+            balconyInfo = " s balkónom";
+        } else {
             balconyInfo = " bez balkónu";
         }
         if(seaView == true){
